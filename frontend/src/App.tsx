@@ -18,6 +18,10 @@ function App() {
 
             <Route index element={<Home />} />
 
+            <Route path="projects" element={<Projects />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="contact" element={<Contacts />} />
+
           </Route>
 
         </Routes>
