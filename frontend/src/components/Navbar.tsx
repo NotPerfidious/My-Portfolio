@@ -23,34 +23,34 @@ function Navbar() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 right-0 p-2 py-3 flex items-center justify-between border-b-[0.1px] border-border">
+        <nav className="fixed top-0 left-0 right-0 bg-background px-5 py-3 flex items-center justify-between border-b-[0.1px] border-border">
 
             <div className="flex items-center gap-5">
-                <NavLink to="/" className=" flex items-center gap-1 text-sm cursor-pointer">
+                <NavLink to="/" className=" flex items-center gap-1 text-sm cursor-pointer hover:text-accent">
                     <Icon icon="lucide:terminal" className="text-accent h-5 w-5" />
 
                     <div>{'<dev/>'}</div>
                 </NavLink>
 
-                <div className="flex gap-5 text-xs text-muted-foreground">
-                    <NavLink to="/" className={({ isActive }) => isActive ? 'text-foreground' : ''}>Home</NavLink>
-                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-foreground' : ''}>Projects</NavLink>
-                    <NavLink to="/profile" className={({ isActive }) => isActive ? 'text-foreground' : ''}>Technical Profile</NavLink>
-                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-foreground' : ''}>Contact</NavLink>
+                <div className="flex gap-5 text-sm text-muted-foreground">
+                    <NavLink to="/" className={({ isActive }) => isActive ? 'text-foreground' : 'hover:text-foreground'}>Home</NavLink>
+                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'text-foreground' : 'hover:text-foreground'}>Projects</NavLink>
+                    <NavLink to="/profile" className={({ isActive }) => isActive ? 'text-foreground' : 'hover:text-foreground'}>Technical Profile</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-foreground' : 'hover:text-foreground'}>Contact</NavLink>
                 </div>
             </div>
 
             <div className="flex items-center gap-3">
 
                 <div>
-                    <Icon onClick={changeTheme} icon={theme == 'dark' ? 'lucide:sun' : 'lucide:moon'} className="text-muted-foreground h-4 w-4" />
+                    <Icon onClick={changeTheme} icon={theme == 'dark' ? 'lucide:sun' : 'lucide:moon'} className="text-muted-foreground h-5 w-5" />
                 </div>
 
                 <div>
 
-                    <a className="flex  bg-accent p-1 px-3 gap-1 text-white rounded-sm cursor-pointer" href={resumePdf} download={"M-Basim-Resume.pdf"}>
+                    <a className="flex items-center  bg-accent p-1 px-3 gap-1 text-white rounded-sm cursor-pointer" href={resumePdf} download={"M-Basim-Resume.pdf"}>
                         <Icon icon="lucide:download" />
-                        <div className="text-xs">Resume</div>
+                        <div className="text-sm">Resume</div>
                     </a>
 
                 </div>

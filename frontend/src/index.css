@@ -8,6 +8,8 @@
     --primary-foreground: #fafafa;
     --muted-foreground: #a1a1aa;
     --border: #e4e4e7;
+    --card: #ffffff;
+    --muted: #f4f4f5;
 }
 
 
@@ -15,6 +17,8 @@
     --background: #0a0a0a;
     --foreground: #fafafa;
     --border: #27272a;
+    --card: #18181b;
+    --muted: #27272a;
 }
 
 @theme {
@@ -23,6 +27,8 @@
     --color-accent: var(--accent);
     --color-muted-foreground: var(--muted-foreground);
     --color-border: var(--border);
+    --color-card: var(--card);
+    --color-muted: var(--muted);
 }
 
 body {
