@@ -23,7 +23,7 @@ function Navbar() {
     }
 
     return (
-        <nav className="fixed top-0 left-0 right-0 bg-background px-5 py-3 flex items-center justify-between border-b-[0.1px] border-border">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60 px-5 py-3 flex items-center justify-between border-b-[0.1px] border-border">
 
             <div className="flex items-center gap-5">
                 <NavLink to="/" className=" flex items-center gap-1 text-sm cursor-pointer hover:text-accent">

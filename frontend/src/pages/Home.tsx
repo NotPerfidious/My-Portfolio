@@ -22,7 +22,7 @@ const featuredProjects = [
         summary: "Real-Time Healthcare Logistics Platform",
         description:
             "Distributed system for blood bank inventory with geo-spatial routing",
-        tags: ["Django", "Redis", "GraphQL", "Maps API"],
+        tags: ["Django", "Redis", "Maps API"],
         github: "https://github.com/NotPerfidious/Blood-Trace.git",
         // live: "https://example.com",
     },
@@ -34,7 +34,7 @@ function Home() {
 
 
     return (
-        <div className="mt-30 px-15 pb-10">
+        <>
 
             <div className='flex items-center justify-between mb-10'>
 
@@ -47,7 +47,7 @@ function Home() {
                         className='mb-10'
                     >
 
-                        <h1 className="text-5xl md:text-7xl  tracking-tight mb-4">
+                        <h1 className="text-5xl md:text-7xl font-medium  tracking-tight mb-4">
                             Muhammad Basim Irfan
                         </h1>
                         <div className="flex items-center gap-3 mb-7">
@@ -102,9 +102,13 @@ function Home() {
 
 
 
-                <div className='size-70 border-none rounded-full overflow-hidden'>
-                    <img src={myPic} alt="" className='w-full h-full object-cover'/>
-                </div>
+                <motion.div
+                    initial={{ opacity: 0.1, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className='size-70 border-none rounded-full overflow-hidden'>
+                    <img src={myPic} alt="" className='w-full h-full object-cover' />
+                </motion.div>
 
             </div>
 
@@ -129,7 +133,7 @@ function Home() {
                     {featuredProjects.map((project, index) => {
                         return (
                             <motion.div
-                                key={index}
+                                key={project.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{
@@ -141,7 +145,7 @@ function Home() {
                                 <div className='flex justify-between items-center mb-5'>
                                     <div className='text-xl font-medium'>{project.name}</div>
 
-                                    <a target="_blank" rel="noopener noreferrer" href={project.github}>
+                                    <a target="_blank" rel="noopener noreferrer" href={project.github} className='text-muted-foreground'>
                                         <Icon icon="lucide-github" className="h-4 w-4 cursor-pointer hover:text-foreground transition-colors" />
                                     </a>
                                 </div>
@@ -178,7 +182,8 @@ function Home() {
 
             </motion.div>
 
-        </div>
+        </>
+
     )
 }
 
