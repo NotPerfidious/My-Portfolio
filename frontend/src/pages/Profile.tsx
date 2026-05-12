@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Icon } from '@iconify/react';
-import { div } from 'motion/react-client';
-import { span } from 'motion/react-m';
+
 
 const education = {
     degree: "Bachelor of Science in Computer Science",

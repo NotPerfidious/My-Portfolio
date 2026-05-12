@@ -10,6 +10,7 @@
     --border: #e4e4e7;
     --card: #ffffff;
     --muted: #f4f4f5;
+    --input-background: #f4f4f5;
 }
 
 
@@ -30,6 +31,7 @@
     --color-border: var(--border);
     --color-card: var(--card);
     --color-muted: var(--muted);
+    --color-input-background: var(--input-background);
 }
 
 body {
